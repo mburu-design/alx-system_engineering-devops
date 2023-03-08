@@ -1,4 +1,2 @@
 #!/bin/bash
-ls -1vd --group-directories-first ./* | sed 's/\(.*\)\/$/\1\//' | tr '\n' ',' | sed 's/,$/\n/'
-
-
+ls -1F | sed 's/\(.*\)/"\1"/' | tr '\n' ',' | sed 's/\(.*\),/\1\n/'
